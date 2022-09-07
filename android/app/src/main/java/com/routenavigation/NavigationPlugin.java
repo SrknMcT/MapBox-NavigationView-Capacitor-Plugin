@@ -35,10 +35,16 @@ public class NavigationPlugin extends Plugin {
         String publicKey = call.getString("valueKey");
 
         Context mContext = getContext();
-        Intent myIntent = new Intent(mContext, TurnByTurnExperienceActivity.class);
+//        Intent myIntent = new Intent(mContext, TurnByTurnExperienceActivity.class);
+//        myIntent.putExtra("pointStartToParse", pointStart);
+//        myIntent.putExtra("pointEndToParse", pointDestination);
+//        myIntent.putExtra("publicKey", publicKey);
+
+        Intent myIntent = new Intent(mContext, NavigationViewActivity.class);
         myIntent.putExtra("pointStartToParse", pointStart);
         myIntent.putExtra("pointEndToParse", pointDestination);
         myIntent.putExtra("publicKey", publicKey);
+
 
         //myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         //mContext.startActivity(myIntent);
